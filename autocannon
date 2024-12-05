@@ -1,0 +1,8 @@
+// Install autocannon
+npm install -g autocannon
+
+// Create
+autocannon -c 100 -d 30 -m POST -b '{"title": "Test Board", "owner": "user123", "isAdmin": true, "permission": "private", "color": "blue"}' -H "Content-Type: application/json" http://4.147.171.63/api/boards
+
+// Read
+autocannon -c 100 -d 30 -m GET http://4.147.171.63/api/boards
